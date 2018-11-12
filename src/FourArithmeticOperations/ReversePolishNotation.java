@@ -4,6 +4,12 @@ import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.Stack;
 
+/*
+ * 逆ポーランド記法への変換アルゴリズムは以下を参考に作成
+ * //http://www.gg.e-mansion.com/~kkatoh/program/novel2/novel208.html
+ */
+
+
 public class ReversePolishNotation {
 
 	private String num;
