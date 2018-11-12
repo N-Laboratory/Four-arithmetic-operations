@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts PUBLIC
+"-//Apache Software Foundation//DTD Struts Configuration 2.3//EN"
+"http://struts.apache.org/dtds/struts-2.3.dtd">
+<struts>
+	<constant name="struts.ui.theme" value="simple" />
+	<!-- 開発者モード(デバッグしたい時にはコメント外してください。ユーザーのエラーページが無効にできます) -->
+	<!-- <constant name="struts.devMode" value="true" /> -->
+	<constant name="struts.devMode" value="true" />
+	<package name="FourArithmeticOperations"
+		extends="struts-default">
+		
+		<action name="CalculateAction"
+			class="FourArithmeticOperations.CalculateAction" method="execute">
+			<result name="success">result.jsp</result>
+			<result name="error">index.jsp</result>
+		</action>
+		<action name="SessionClearAction"
+			class="FourArithmeticOperations.SessionClearAction" method="execute">
+			<result name="success">index.jsp</result>
+		</action>
+		
+	</package>
+</struts>
