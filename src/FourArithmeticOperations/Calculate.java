@@ -90,6 +90,10 @@ public class Calculate {
 		String regex = "[+-]?(0|[1-9]+\\d*.0)";
 		//134.0のように少数が出ない数値の場合は.0を除去
 		if(num.matches(regex))	num = num.replace(".0", "");
+		for (int i= 0; i<num.length();i++) {
+			char check = num.charAt(i);
+			if(check == 'E') num = "エラー： 計算結果が９桁以上の四則演算は行えません。";
+		}
 		return num;
 	}
 
